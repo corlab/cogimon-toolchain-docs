@@ -1,0 +1,68 @@
+.prettyprint .str, code .str { color: #a9758c; } /* string */
+.prettyprint .kwd, code .kwd { color: #d58840; } /* keyword */
+.prettyprint .com, code .com { color: #767979; font-style: italic; } /* comment */
+.prettyprint .typ, code .typ { color: #80aac6; } /* type */
+.prettyprint .lit, code .lit { color: #ac758c; } /* literal */
+.prettyprint .pun, code .pun { color: #fff; } /* punctuation */
+.prettyprint .pln, code .pln { color: #fff; } /* plaintext */
+.prettyprint .tag, code .tag { color: #fecf84; } /* html/xml tag */
+.prettyprint .atn, code .atn { color: #ce8a45; } /* html/xml attribute name */
+.prettyprint .atv, code .atv { color: #b2c869; } /* html/xml attribute value */
+.prettyprint .dec, code .dec { color: #80aac6; } /* decimal */
+
+pre.prettyprint, code.prettyprint {
+background-color: #393939;
+padding: 10px;
+font-family: 'Droid Sans Mono', ;
+border: none;
+font-size: 0.875em;
+font-weight: 500;
+white-space: pre-wrap;
+width: 70%;
+margin: 0.875em auto;
+padding: 0.875em;
+}
+
+ol.linenums {
+  color: #666666;
+  list-style: decimal !important;
+}
+
+ol.linenums li {
+   color: #666666;
+   line-height: 18px;
+   padding-left: 1.5em;
+
+   -webkit-transition: all 0.15s ease-in-out;
+   -moz-transition: all 0.15s ease-in-out;
+   -o-transition: all 0.15s ease-in-out;
+   -ms-transition: all 0.15s ease-in-out;
+   transition: all 0.15s ease-in-out;
+}
+
+ol.linenums li:hover {
+    background:rgba(100,100,100,.5);
+}
+
+ol.linenums li.selectedLine {
+   border-color: #C1E0FF;
+   border-width: 1px;
+   border-style: solid;
+   /*background:rgba(0,0,0,.3);*/
+}
+
+.prettyprint ::-moz-selection{ background:rgba(0,0,0,.7); }
+.prettyprint ::selection{ background:rgba(0,0,0,.7); }
+
+@media print {
+.prettyprint .str, code .str { color: #060; }
+.prettyprint .kwd, code .kwd { color: #006; font-weight: bold; }
+.prettyprint .com, code .com { color: #600; font-style: italic; }
+.prettyprint .typ, code .typ { color: #404; font-weight: bold; }
+.prettyprint .lit, code .lit { color: #044; }
+.prettyprint .pun, code .pun { color: #440; }
+.prettyprint .pln, code .pln { color: #000; }
+.prettyprint .tag, code .tag { color: #006; font-weight: bold; }
+.prettyprint .atn, code .atn { color: #404; }
+.prettyprint .atv, code .atv { color: #060; }
+}
