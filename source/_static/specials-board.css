@@ -23,6 +23,35 @@ margin: 0.875em auto;
 padding: 0.875em;
 }
 
+tt.code, tt.docutils.literal {
+background-color: #393939;
+font-family: 'Droid Sans Mono', ;
+border: none;
+color: #DDDDDD;
+font-size: 1em;
+white-space: pre-wrap;
+padding-left: 0.7em;
+padding-right: 0.7em;
+padding-top: 0.12em;
+padding-bottom: 0.12em;
+}
+
+.highlight .hll {
+   border: none;
+   background:rgba(0,0,0,0);
+}
+
+.parentHightlight {
+   border-color: #C1E0FF;
+   border-width: 1px;
+   border-style: solid;
+   background:rgba(0,0,0,0);
+}
+
+div.highlight {
+  background:rgba(0,0,0,0);
+}
+
 ol.linenums {
   color: #666666;
   list-style: decimal !important;

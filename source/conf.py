@@ -117,6 +117,10 @@ html_theme_options = {
 #  'codebgcolor' : 'blue'
 }
 
+html_context = {
+    'css_files': ['_static/specials-board.css'],
+}
+
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 

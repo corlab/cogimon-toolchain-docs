@@ -1,0 +1,48 @@
+{% extends "!layout.html" %}
+
+{%- block extrahead %}
+   <link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js"></script>
+   <script type="text/javascript">
+    $(function () {
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+        $('span.hll').parent().addClass('parentHightlight');
+    });
+   </script>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         //prettyPrint()
+         $('.prettyprint').each(function(i) {
+            var classList = $(this).attr("class").split(" ");
+            // iterate through list
+            for (var iter = 0; iter < classList.length; iter++) {
+               if (classList[iter].startsWith("selected-")) {
+                  // split line numbers to highlight
+                  var lineNumbers = classList[iter].replace("selected-", "").split("-");
+                  // outsource into another function TODO
+                  var olContainer = $(this).find("ol.linenums");
+                  var allLIs = $(olContainer).find("li");
+                  for (var liIter = 0; liIter < allLIs.length; liIter++) {
+                     for (var numIter = 0; numIter < lineNumbers.length; numIter++) {
+                        //var tmp = allLIs[liIter].className;
+                        //tmp = tmp.replace("L","");
+
+                        if (liIter == lineNumbers[numIter]) {
+                           $(allLIs[liIter]).addClass('selectedLine');
+                           break;
+                        }
+                     }
+                  }
+                  break;
+               } else {
+                  continue;
+               }
+            }
+
+
+         });
+      });
+   </script>
+{% endblock %}
