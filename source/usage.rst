@@ -22,9 +22,9 @@ necessary. Even some convenience functionalities are provided.
      :code:`./bin/rsb-toolscl0.13 call 'spread:/GazeboDeployerWorldPlugin/spawnModel("/vol/cogimon/etc/lwr-robot-description/lwr-robot.urdf")'`
 
 4. load the components necessary to simulate the KUKA
- :code:`./bin/rsb-toolscl0.13 call -l /vol/toolkit/nightly/trusty/x86_64/last/share/rst0.13/proto/sandbox/rst/cogimon/ModelComponentConfig.proto 'spread:/GazeboDeployerWorldPlugin/deployRTTComponentWithModel(pb:.rst.cogimon.ModelComponentConfig:{component_name:"lwr_gazebo" component_type:"LWRGazeboComponent" component_package:"rtt-gazebo-lwr-integration" model_name:"kuka-lwr" script:"/vol/cogimon/etc/worlds/scenario1.ops"})'`
+ :code:`./bin/rsb-toolscl0.13 call -l /vol/cogimon/share/rst0.13/proto/sandbox/rst/cogimon/ModelComponentConfig.proto 'spread:/GazeboDeployerWorldPlugin/deployRTTComponentWithModel(pb:.rst.cogimon.ModelComponentConfig:{component_name:"lwr_gazebo" component_type:"LWRGazeboComponent" component_package:"rtt-gazebo-lwr-integration" model_name:"kuka-lwr" script:"/vol/cogimon/etc/worlds/scenario1.ops"})'`
 5. send joint angles to the template controller
- :code:`./bin/rsb-toolscl0.13 send -I/vol/toolkit/nightly/trusty/x86_64/last/share/rst0.13/proto/stable -l/vol/toolkit/nightly/trusty/x86_64/last/share/rst0.13/proto/stable/rst/kinematics/JointAngles.proto 'pb:.rst.kinematics.JointAngles:{angles: [0,-0.8,0,0.4,0,0,0]}' 'spread:/rtt/lwr/cmd/position'`
+ :code:`./bin/rsb-toolscl0.13 send -I/vol/cogimon/share/rst0.13/proto/stable -l/vol/cogimon/share/rst0.13/proto/stable/rst/kinematics/JointAngles.proto 'pb:.rst.kinematics.JointAngles:{angles: [0,-0.8,0,0.4,0,0,0]}' 'spread:/rtt/lwr/cmd/position'`
 
 
 **TODO** *change all paths to /vol/cogimon*
