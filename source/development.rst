@@ -13,7 +13,7 @@ To clone and build the controller proceed as follows:
 2. ``mkdir mm-controller/build && cd mm-controller/build``
 
 3. Cmake command links to the volume:
- :code:`cmake -DOROCOS-RTT_DIR=/vol/cogimon/lib/cmake/orocos-rtt -DRCI_DIR=/vol/cogimon/share/rci0.5 -DRSC_DIR=/vol/cogimon/share/rsc0.13 -DNemoMath_DIR=/vol/cogimon/share/NemoMath0.5 -DRSB_DIR=/vol/cogimon/share/rsb0.13 ..`
+ :code:`cmake -DOROCOS-RTT_DIR=/vol/cogimon/lib/cmake/orocos-rtt -DRCI_DIR=/vol/cogimon/share/rci0.5 -DRSC_DIR=/vol/cogimon/share/rsc0.13 -DNemoMath_DIR=/vol/cogimon/share/NemoMath0.5 -DRSB_DIR=/vol/cogimon/share/rsb0.13 -Dorocos_kdl_DIR=/vol/cogimon/share/orocos_kdl ..`
 4. ``make -j4``
 
 
