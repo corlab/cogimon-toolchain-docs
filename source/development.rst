@@ -8,7 +8,7 @@ Cloning the sample torque controller (mm-controller)
 
 To clone and build the controller proceed as follows:
 
-1. ``git clone https://github.com/corlab/rtt-gazebo-lwr-simulation.git mm-controller``
+1. ``git clone https://github.com/corlab/rtt-lwr-controller-template.git mm-controller``
 
 2. ``mkdir mm-controller/build && cd mm-controller/build``
 
