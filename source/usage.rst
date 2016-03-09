@@ -1,5 +1,9 @@
+.. _usage:
+
 Using the Framework
 ===================
+
+.. _usage-preconfigured:
 
 Using the pre-configured volume installation
 --------------------------------------------
@@ -9,7 +13,7 @@ necessary. Even some convenience functionalities are provided.
 
 1. goto the correct volume ``cd /vol/cogimon``
 2. setup up all necessary paths ``source etc/setupEnv.sh``
-3. do steps 1.-2. for 4.a, 4.b and 4.c.
+3. do steps 1.-2. for 3.a, 3.b and 3.c.
     a. start the Gazebo **server** with the specific plugins and a desired world-file
      :code:`./bin/gzserver -s /vol/cogimon/lib/orocos/gnulinux/rtt_gazebo_system/librtt_gazebo_system.so /vol/cogimon/etc/worlds/scenario1.world`
     b. start the Gazebo **client**
@@ -22,6 +26,7 @@ necessary. Even some convenience functionalities are provided.
 5. send joint angles to the template controller
  :code:`./bin/rsb-toolscl0.13 send -I/vol/cogimon/share/rst0.13/proto/stable -l/vol/cogimon/share/rst0.13/proto/stable/rst/kinematics/JointAngles.proto 'pb:.rst.kinematics.JointAngles:{angles: [0,-0.8,0,0.4,0,0,0]}' 'socket:/rtt/lwr/cmd/position'`
 
+If you want to use your own controller see :ref:`development`.
 
 Troubleshooting
 """""""""""""""
