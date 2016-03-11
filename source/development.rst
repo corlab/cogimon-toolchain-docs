@@ -32,6 +32,6 @@ After you have sourced the setup file with the line below,
 you have to add the path to the shared object of your RTT component to the
 search path of orocos (e.g. mm-controller):
 
-    2.1) e.g. ``export RTT_COMPONENT_PATH=/homes/.../mm-controller/build/src/orocos:$RTT_COMPONENT_PATH``
+    2.1) e.g. ``export RTT_COMPONENT_PATH=$RTT_COMPONENT_PATH:/homes/.../mm-controller/build/src/orocos``
 
 
